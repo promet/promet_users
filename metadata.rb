@@ -1,0 +1,12 @@
+name             'promet_users'
+maintainer       'Promet Solutions, Inc.'
+maintainer_email 'gregpalmier'
+license          'All rights reserved'
+description      'Installs/Configures promet_users'
+long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+version          '0.1.1'
+depends          'apt'
+depends          'git'
+depends          'ssh_known_hosts'
+depends          'sudo'
+depends          'users'
