@@ -18,9 +18,14 @@
 # limitations under the License.
 #
 
-# Searches data bag "users" for groups attribute "sysadmin".
-# Places returned users in Unix group "sysadmin" with GID 2300.
-users_manage "www-data" do
+# Searches data bag "users" for groups attribute "www-data".
+# Places returned users in Unix group "www-data" with GID 2600.
+users_manage 'www-data' do
   group_id 2600
   action [ :remove, :create ]
+end
+
+# change actual www-data user shell to non-interactive.
+user 'www-data' do
+  shell '/bin/false'
 end
